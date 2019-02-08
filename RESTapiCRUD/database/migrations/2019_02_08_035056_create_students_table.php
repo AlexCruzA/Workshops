@@ -15,6 +15,11 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedIntiger('student_id');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email');
+            $table->string('address');
             $table->timestamps();
         });
     }
@@ -29,3 +34,6 @@ class CreateStudentsTable extends Migration
         Schema::dropIfExists('students');
     }
 }
+
+//firstname, lastname, email, address
+
